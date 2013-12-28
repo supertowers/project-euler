@@ -1,0 +1,15 @@
+#!/bin/bash
+
+DIRECTORY=$1
+
+if [ -z "$DIRECTORY" ]
+then
+    DIRECTORY="."
+fi
+
+(
+    cd $DIRECTORY;
+    clear; mocha
+    watch-files . "*" "clear; mocha"
+)
+
