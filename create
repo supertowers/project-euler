@@ -1,0 +1,28 @@
+#!/bin/bash
+
+NUMBER=$1
+NAME=$2
+
+if [ -z "$NAME" ]
+then
+    echo "Usage: $0 (number) (name)"
+    exit 1
+fi
+
+(
+    cp -R 000.Template $NUMBER.$NAME
+    cd $NUMBER.$NAME
+    mv Problem000.js Problem$NUMBER.js
+
+    for i in *;
+    do
+        cp $i $i.bak
+        sed "s/000/$NUMBER/g" $i.bak > $i
+        rm $i.bak
+    done
+
+    # EDIT ELEMENTS
+    vi README.md
+    vi -o "Problem$NUMBER.js" "test.js"
+)
+
