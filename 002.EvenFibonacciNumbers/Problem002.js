@@ -1,21 +1,22 @@
 
 var Problem = {
-    fibonacciEven: function (number) {
+    fibonacciSumEven:
+        function (maximum) {
 
-        var current = 1, prev = 1, sum = 1;
+            var current = 0, prev = 1, sum = 0;
 
-        do {
-            if (current % 2 == 1) {
-                sum += current;
+            do {
+                if (current % 2 == 1) {
+                    sum += current;
+                }
+
+                current += prev;
+                prev = current - prev;
             }
+            while (current < maximum);
 
-            current += prev;
-            prev = current - prev;
+            return sum;
         }
-        while (current < number);
-
-        return sum;
-    }
 };
 
 module.exports = Problem;
