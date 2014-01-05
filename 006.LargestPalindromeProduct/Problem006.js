@@ -7,7 +7,7 @@ var Problem = {
             var len = strNumber.length;
             for (var i = 0; i < len; i += 1) {
                 if (strNumber[i] !== strNumber[len - i - 1]) {
-                    return false
+                    return false;
                 }
             }
 
