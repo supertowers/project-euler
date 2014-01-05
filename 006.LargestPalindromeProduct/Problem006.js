@@ -5,10 +5,8 @@ var Problem = {
 
             var strNumber = "" + number;
             var len = strNumber.length;
-            for (var i = 0; i < len; i += 1)
-            {
-                if (strNumber[i] !== strNumber[len - i - 1])
-                {
+            for (var i = 0; i < len; i += 1) {
+                if (strNumber[i] !== strNumber[len - i - 1]) {
                     return false
                 }
             }
@@ -31,10 +29,8 @@ var Problem = {
                 while (b > 0)
                 {
                     product = a * b;
-                    if (this.isPalindromic(product))
-                    {
-                        if (product > superPalindromic)
-                        {
+                    if (this.isPalindromic(product)) {
+                        if (product > superPalindromic) {
                             superPalindromic = product;
                             // console.log(a + " x " + b + " = " + product);
                         }
