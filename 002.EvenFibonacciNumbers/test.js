@@ -1,5 +1,5 @@
 
-var assert = require("assert")
+var assert = require("assert");
 
 var problem = new require("./Problem002");
 
@@ -23,6 +23,6 @@ describe('Problem002', function(){
             // 1,1,2,3,5 = 1,3,5 = 4613732
             assert.equal(4613732, problem.fibonacciSumEven(4000000));
         });
-    })
-})
+    });
+});
 

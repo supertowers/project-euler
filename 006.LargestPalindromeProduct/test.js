@@ -1,5 +1,5 @@
 
-var assert = require("assert")
+var assert = require("assert");
 
 var problem = new require("./Problem006");
 
@@ -27,7 +27,7 @@ describe('Problem006', function(){
         it("should return false for a really big number", function () {
             assert.equal(false, problem.isPalindromic(3033484224483033));
         });
-    })
+    });
 
     describe('#findPalindromicProduct()', function(){
         it("should return 9 for numbers below 10 (3 x 3 = 9)", function () {
@@ -36,7 +36,7 @@ describe('Problem006', function(){
         it("should return 9009 for numbers below 100", function () {
             assert.equal(9009, problem.findPalindromicProduct(100));
         });
-    })
+    });
 
-})
+});
 
