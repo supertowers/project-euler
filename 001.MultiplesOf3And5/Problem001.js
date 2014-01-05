@@ -4,7 +4,7 @@ var Problem = {
         var sum = 0;
         for (i = 1; i < amount; i += 1)
         {
-            if (i % 5 == 0 || i % 3 == 0)
+            if (i % 5 === 0 || i % 3 === 0)
             {
                 sum += i;
             }

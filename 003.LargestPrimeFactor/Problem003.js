@@ -6,7 +6,7 @@ var Problem = {
             primes = [];
             for (var i = 2; i <= number / (i - 1); i++)
             {
-                if (number % i == 0 && this._isPrime(i)) {
+                if (number % i === 0 && this._isPrime(i)) {
                     primes.push(i);
                 }
             }
@@ -17,7 +17,7 @@ var Problem = {
         function (number) {
             for (i = 2; i < number; i++)
             {
-                if (number % i == 0)
+                if (number % i === 0)
                 {
                     return false;
                 }
